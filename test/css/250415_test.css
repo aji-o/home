@@ -2,6 +2,7 @@
 body {
     font-family: "Pretendard Variable",sans-serif;
     font-weight: 400;
+    font-size: 17px;
     line-height: 1.5;
     color: #555555;
     word-break: keep-all;
@@ -23,12 +24,12 @@ a {
     text-decoration: none;
 }
 /* END :: 태그의 기본 스타일 삭제(초기화)*/
+header {
+    height: 100px;
+}
 .wrapper {
     width: 1260px;
     margin: auto;
-}
-header {
-    height: 100px;
 }
 header .logo a img {
     width: 136px;
@@ -40,7 +41,7 @@ header .wrapper {
     display: flex;
     justify-content: space-between;
 }
-header .gnb ul {
+header .gnb ul{
     display: flex;
 }
 header .gnb ul a {
@@ -50,4 +51,58 @@ header .gnb ul a {
     font-size: 25px;
     letter-spacing: -0.02em;
     padding: 30px 30px 32px 30px;
+}
+.visual {
+    background: url(../images/atite.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 800px;
+    color: #1d1d1d;
+}
+.visual h2 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1.3px;
+    padding: 317px 0 24px 0;
+}
+.biz {
+    margin: 145px 0 0 0;
+    text-align: center;
+}
+.biz .tit h2 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1.3px;
+    color: #1d1d1d;
+}
+.biz .tit p {
+    color: #244d8e;
+}
+.biz .list {
+    margin: 55px 0 0 0;
+}
+.biz .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.biz .list ul li {
+    width: 297px;
+}
+.biz .list ul a {
+    text-align: center;
+    display: block; /* a의 필수값 */
+}
+.biz .list ul li h3 {
+    font-size: 35px;
+    color: #1d1d1d;
+    margin: 18px 0 15px 0;
+}
+.biz .list ul li .more {
+    border: 1px solid #6d6d6d;
+    display: block;
+    padding: 16px 0 16px 0;
+    margin: 17px 0 0 0;
 }
