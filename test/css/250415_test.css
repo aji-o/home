@@ -106,3 +106,41 @@ header .gnb ul a {
     padding: 16px 0 16px 0;
     margin: 17px 0 0 0;
 }
+.brand {
+    background: url(../images/brand_bg.png) no-repeat center center / cover;
+    height: 800px;
+    margin: 189px 0 0 0;
+    color: #fff;
+}
+.brand h2 {
+    padding: 190px 0 15px 0;
+}
+.brand .sub_tit {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1.3px;
+    margin: 0 0 62px 0;
+}
+.brand .cont {
+    color: rgba(255, 255, 255, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 30px 0 0 0;
+}
+footer {
+    background-color: #1d1d1d;
+    color: #fff;
+    padding: 47px 0 70px 0;
+}
+footer .footer_nav ul {
+    display: flex;
+    gap: 40px;
+}
+footer .footer_info {
+    display: flex;
+    gap: 35px;
+    padding: 45px 0 15px 0;
+}
+footer .footer_info address {
+    font-style: normal;
+}
