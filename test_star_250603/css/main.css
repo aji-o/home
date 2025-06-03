@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: '맑은 고딕', 'Malgun Gothic', '돋움', 'dotum';
+    font-size: 15px;
+    color: #333;
+    background-color: #fff;
+}
+
+.warpper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    height: 100px;
+}
+
+.popup {
+    height: 300px;
+    background-color: #ededed;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    padding-top: 20px;
+}
+
+.news {
+    width: 400px;
+}
+
+.banner {
+    width: 380px;
+    background-color: #ededed;
+}
+
+.link {
+    width: 380px;
+    background-color: royalblue;
+}
+
+footer {
+    height: 100px;
+    padding-top: 20px;
+}
