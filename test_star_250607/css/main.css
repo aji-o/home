@@ -6,12 +6,11 @@
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none; /* 잊지마!! */
     color: inherit;
 }
 
-
-body {
+html, body {
     font-family: '맑은 고딕', '돋움';
     font-size: 15px;
     color: #333;
@@ -20,51 +19,50 @@ body {
 
 .wrapper {
     width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto; /* 잊지마!! */
 }
 
 header {
-    z-index: 100;
+    z-index: 100; /* 잊지마!! */
     height: 100px;
     display: flex;
     justify-content: space-between;
     position: relative;
 }
 
-header h1 {
-    padding-top: 25px;
+header .logo {
+    padding-top: 20px;
 }
 
 header .gnb .depth1 {
     display: flex;
 }
 
-header .gnb .depth1 > li {
+header .gnb ul.depth1 > li {
     width: 165px;
     text-align: center;
-    position: relative; /* depth2 (2차메뉴) 정렬의 기준 */
+    position: relative; /* depth2 정렬의 기준 */
 }
 
-header .gnb .depth1 > li > a {
+header .gnb ul.depth1 > li > a {
     display: block;
     font-size: 22px;
     font-weight: 700;
     line-height: 100px;
 }
 
-header .gnb .depth1 > li:hover > a {
+header .gnb ul.depth1 > li:hover > a {
     color: #0066ad;
 }
 
-/*****************   메뉴 오버시 등장  *******************/
+/* 메뉴 오버 시 등장 */
 
-header .gnb .depth1 > li.over > .depth2 {
+header .gnb ul.depth1 > li.over > .depth2 {
     display: block;
 }
 
-
 header .gnb .depth2 {
-    position: absolute; /* li 기준으로 정렬 */
+    position: absolute; /* gnb 기준으로 정렬 */
     left: 0;
     top: 100px;
     width: 100%;
@@ -72,14 +70,14 @@ header .gnb .depth2 {
     display: none;
 }
 
-header .gnb .depth2 > li > a {
+header .gnb .depth2 li > a {
     display: block;
     background-color: #0066ad;
     color: #fff;
     line-height: 50px;
 }
 
-header .gnb .depth2 > li > a:hover {
+header .gnb .depth2 li:hover > a {
     background-color: #30a3f3;
 }
 
@@ -88,35 +86,33 @@ header .gnb .depth2 > li > a:hover {
 
 
 
-
 .visual {
     height: 300px;
-    background-color: #adadad;
+    background-color: darkgray;
 }
 
 .container {
+    height: 200px;
     display: flex;
     justify-content: space-between;
-    height: 200px;
     padding-top: 20px;
 }
 
-.news {
+.bbs {
     width: 400px;
 }
 
 .banner {
     width: 380px;
-    background-color: darkcyan;
+    background-color: bisque;
 }
 
 .link {
     width: 380px;
-    background-color: darkgoldenrod;
 }
 
 footer {
-    height: 100px;
     padding-top: 20px;
-    background-color: khaki;
+    height: 100px;
+    background-color: antiquewhite;
 }
