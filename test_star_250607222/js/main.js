@@ -9,6 +9,38 @@ $(document).ready(function(){
     })
 
 
+
+    /* visual 추가 */
+
+    let idx = 1
+    let obj_left = 0
+
+    setInterval(function(){
+        if(idx < 3){
+            idx++
+        }else{
+            idx = 1
+        }
+
+        /*
+            idx = 1 ... 0
+                  2 ... -1200
+                  3 ... -2400
+        */
+
+        obj_left = -(idx-1)*1200
+        console.log(obj_left)
+
+        $('.visual ul').animate({
+            left: obj_left
+        }, 500)
+        
+    }, 3000)
+
+    /* visual 끝 */
+
+
+
     /* bbs 추가 */
 
     $('.bbs .tap > li').on('click', function(){
@@ -23,17 +55,4 @@ $(document).ready(function(){
     $('.layer_popup button').on('click', function(){
         $('.layer_popup').hide()
     })
-
-    let idx = 1
-
-    setInterval(function(){
-        if(idx < 3){
-            idx++ //1 더하기
-        }else{
-            idx = 1
-        }
-        console.log(idx)
-        $('.visual ul li').removeClass('active')
-        $('.visual ul li').eq(idx - 1).addClass('active')
-    }, 3000) //3초
 })

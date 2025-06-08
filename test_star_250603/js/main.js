@@ -7,4 +7,11 @@ $(document).ready(function(){
     $('header .gnb').on('mouseleave', function(){
         $('header .gnb .depth1 > li').removeClass('over')
     })
+
+    /* news 추가 */
+
+    $('.news > .tap > li').on('click', function(){
+        $('.news > .tap > li').removeClass('active')
+        $(this).addClass('active')
+    })
 })

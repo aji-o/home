@@ -82,11 +82,24 @@ header .gnb .depth2 > li > a:hover {
 
 
 
-
-
 .visual {
     height: 300px;
     overflow: hidden;
+    position: relative;
+}
+
+.visual ul li {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.visual ul li.active {
+    z-index: 2;
+    opacity: 1;
 }
 
 
@@ -103,7 +116,7 @@ header .gnb .depth2 > li > a:hover {
 
 .bbs {
     width: 400px;
-    background-color: violet;
+    position: relative; /* detail 정렬의 기준 */
 }
 
 .bbs .tap {
@@ -112,20 +125,54 @@ header .gnb .depth2 > li > a:hover {
 
 .bbs .tap > li > button {
     background-color: #ededed;
-    font-size: 20px;
+    font-size: 18px;
     border: 0;
     padding: 5px 10px;
+    cursor: pointer;
 }
 
 .bbs .tap > li.active > button {
-    background-color: #0066ad;
-    color: #fff;
+    background-color: #fff;
+    border: 1px solid #0066ad;
+    border-bottom: 0;
+    color: #0066ad;
     font-weight: 700;
+}
+
+.bbs .tap > li.active .detail {
+    display: block;
 }
 
 .bbs .detail {
     display: none;
+    position: absolute; /* .bbs */
+    left: 0;
+    top: 50px;
+    width: 100%;
 }
+
+.bbs .notice ul li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.bbs .notice ul li a:hover {
+    color: #0066ad;
+    text-decoration: underline;
+}
+
+.bbs .gallery ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.bbs .gallery ul li a:hover img {
+    opacity: 0.5;
+}
+
+
+
 
 .banner {
     width: 380px;
@@ -137,6 +184,62 @@ header .gnb .depth2 > li > a:hover {
     background-color: burlywood;
 }
 
+.layer_popup {
+    z-index: 200;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 200px;
+    width: 500px;
+    background-color: #0066ad;
+    padding: 40px 40px;
+    color: #fff;
+    
+    display: none;
+}
+
+.layer_popup h2 {
+    font-size: 25px;
+}
+
+.layer_popup p {
+    font-size: 17px;
+    margin: 20px 0 40px 0;
+}
+
+.layer_popup button {
+    background-color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 10px 10px;
+    border: 0;
+}
+
+
 footer {
     height: 100px;
+    padding-top: 20px;
+    background-color: #f7f7f7;
+    display: flex;
+}
+
+footer .f_logo {
+    margin: 0 20px;
+}
+
+footer .f_logo img {
+    width: 150px;
+}
+
+footer .f_nav {
+    display: flex;
+}
+
+footer .f_nav li {
+    margin-right: 10px;
+}
+
+footer .copy {
+    margin: 10px 0;
+    color: #8b8b8b;
 }
