@@ -1,7 +1,4 @@
 $(document).ready(function(){
-
-    //header 
-
     $('header .gnb > ul.depth1 > li').on('mouseenter focusin', function(){
         $('header .gnb > ul.depth1 > li').removeClass('over')
         $(this).addClass('over')
@@ -11,7 +8,7 @@ $(document).ready(function(){
         $('header .gnb > ul.depth1 > li').removeClass('over')
     })
 
-    //slide
+    //header -end
 
     let idx = 1
 
@@ -21,27 +18,26 @@ $(document).ready(function(){
         }else{
             idx = 1
         }
-        $('.slide ul li').removeClass('active')
-        $('.slide ul li').eq(idx -1).addClass('active')
+
+        $('.slide ul li').eq(idx-1).addClass('active')
+
     }, 3000);
 
-
-    //news
+    //slide -end
 
     $('.contents .news > ul > li').on('click', function(){
         $('.contents .news > ul > li').removeClass('active')
         $(this).addClass('active')
     })
 
+    //contents -end
 
-    //layer_popup
-
-    $('.contents .news > ul > li.notice > .detail > ul > li > a.popup_btn').on('click', function(){
+    $('.detail .popup_btn').on('click', function(){
         $('.layer_popup').show()
     })
-    $('.layer_popup .close').on('click', function(){
-    $('.layer_popup').hide()
+
+    $('.layer_popup .close button').on('click', function(){
+        $('.layer_popup').hide()
     })
 
-
-}) //$(document).ready
+})
