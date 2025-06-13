@@ -8,7 +8,20 @@ $(document).ready(function(){
         $('header .gnb > ul.depth1 > li').removeClass('over')
     })
 
+    //header -menu_over
+
+    $('header').on('mouseenter', function(){
+        $('header').removeClass('menu_over')
+        $(this).addClass('menu_over')
+    })
+
+    $('.slide ul li').on('mouseenter', function(){
+        $('header').removeClass('menu_over')
+    })
+
+
     //header -end
+
 
     let idx = 1
 
@@ -23,7 +36,7 @@ $(document).ready(function(){
 
     }, 3000);
 
-    //slide -end
+    //slide -end 서서히 다른걸로 바뀌는거
 
     $('.contents .news > ul > li').on('click', function(){
         $('.contents .news > ul > li').removeClass('active')
