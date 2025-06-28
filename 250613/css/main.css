@@ -79,10 +79,13 @@ header .gnb > ul.depth1 > li > ul.depth2 > li > a:hover {
     padding-bottom: 20px;
     height: 300px;
     position: relative;
+    overflow: hidden;
 }
-
-.slide 
 
 footer {
     margin: 200px 0;
+}
+
+.footerWrap {
+    display: flex;
 }
